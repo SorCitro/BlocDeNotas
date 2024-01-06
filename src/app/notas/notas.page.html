@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Bloc de Notas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let nota of notas; let i = index">
+      <ion-input [(ngModel)]="notas[i]" placeholder="Editar nota"></ion-input>
+      <ion-button (click)="eliminarNota(i)" color="danger" slot="end">Eliminar</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-input [(ngModel)]="nuevaNota" placeholder="Nueva nota"></ion-input>
+    <ion-button (click)="agregarNota()" expand="block">Agregar</ion-button>
+  </ion-item>
+</ion-content>
