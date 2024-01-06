@@ -21,8 +21,6 @@ export class NotasPage {
   }
 
   editarNota(index: number, nuevaNota: string) {
-    if (nuevaNota.trim() !== '') {
-      this.notas[index] = nuevaNota;
-    }
+    this.notas[index] = nuevaNota;
   }
 }
